@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Submit Complaint - EcoServe</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/submit-complaint.css">
+
+</head>
+
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <div class="brand">
+            🌱 EcoServe
+        </div>
+
+        <div class="menu">
+
+            <a href="dashboard.html" class="menu-item">
+                🏠 Dashboard
+            </a>
+
+            <a href="complaints.html" class="menu-item">
+                📋 Complaints
+            </a>
+
+            <a href="submit-complaint.html" class="menu-item active">
+                ➕ Submit Complaint
+            </a>
+
+            <a href="analytics.html" class="menu-item">
+                📊 Analytics
+            </a>
+
+            
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="./settings.html" class="menu-item">
+                ⚙️ Settings
+            </a>
+
+            <a href="index.html" class="menu-item">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+
+    <div class="main-content">
+
+        <!-- TOP BAR -->
+
+        <div class="topbar">
+
+            <div>
+                <h2>Submit Complaint</h2>
+                <p>Report an environmental issue in your area.</p>
+            </div>
+
+            <div class="profile">
+                👤 Citizen
+            </div>
+
+        </div>
+
+
+        <!-- PAGE TITLE -->
+
+        <div class="page-header">
+
+            <h1>Submit Complaint</h1>
+
+            <p>
+                Report an environmental issue in your area.
+            </p>
+
+        </div>
+
+
+        <!-- COMPLAINT FORM -->
+
+        <div class="complaint-card">
+
+            <div class="card-header">
+
+                <h2>Complaint Information</h2>
+
+                <p>
+                    Please provide accurate information about the issue.
+                </p>
+
+            </div>
+
+
+            <form id="complaintForm">
+
+
+                <!-- TITLE -->
+
+                <div class="form-group">
+
+                    <label for="title">
+                        Complaint Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="title"
+                        placeholder="Example: Garbage dumped near road"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CATEGORY -->
+
+                <div class="form-group">
+
+                    <label for="category">
+                        Complaint Category
+                    </label>
+
+                    <select id="category" required>
+
+                        <option value="">
+                            Select Category
+                        </option>
+
+                        <option value="Waste Management">
+                            Waste Management
+                        </option>
+
+                        <option value="Water Pollution">
+                            Water Pollution
+                        </option>
+
+                        <option value="Air Pollution">
+                            Air Pollution
+                        </option>
+
+                        <option value="Noise Pollution">
+                            Noise Pollution
+                        </option>
+
+                        <option value="Garbage Disposal">
+                            Garbage Disposal
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div class="form-group">
+
+                    <label for="location">
+                        Location
+                    </label>
+
+                    <input
+                        type="text"
+                        id="location"
+                        placeholder="Example: Bachupally"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="form-group">
+
+                    <label for="description">
+                        Complaint Description
+                    </label>
+
+                    <textarea
+                        id="description"
+                        rows="6"
+                        placeholder="Describe the environmental issue..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- IMAGE -->
+
+                <div class="form-group">
+
+                    <label for="image">
+                        Upload Image
+                    </label>
+
+                    <input
+                        type="file"
+                        id="image"
+                        accept="image/*"
+                    >
+
+                    <small>
+                        Upload an image of the environmental issue.
+                    </small>
+
+                    <div id="imagePreview"></div>
+
+                </div>
+
+
+                <!-- PRIORITY -->
+
+                <div class="form-group">
+
+                    <label for="priority">
+                        Priority
+                    </label>
+
+                    <select id="priority" required>
+
+                        <option value="">
+                            Select Priority
+                        </option>
+
+                        <option value="Low">
+                            Low
+                        </option>
+
+                        <option value="Medium">
+                            Medium
+                        </option>
+
+                        <option value="High">
+                            High
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- BUTTONS -->
+
+                <div class="button-group">
+
+                    <button
+                        type="button"
+                        class="clear-btn"
+                        onclick="clearForm()">
+                        Clear
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="submit-btn">
+                        Submit Complaint
+                    </button>
+
+                </div>
+
+
+                <!-- SUCCESS MESSAGE -->
+
+                <div
+                    id="successMessage"
+                    class="success-message">
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/submit-complaint.js"></script>
+
+</body>
+
+</html>

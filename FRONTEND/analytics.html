@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analytics - EcoServe</title>
+
+    <link rel="stylesheet" href="css/analytics.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <div class="brand">
+            🌱 EcoServe
+        </div>
+
+        <div class="menu">
+
+            <a href="dashboard.html" class="menu-item">
+                🏠 Dashboard
+            </a>
+
+            <a href="complaints.html" class="menu-item">
+                📋 Complaints
+            </a>
+
+            <a href="submit-complaint.html" class="menu-item">
+                ➕ Submit Complaint
+            </a>
+
+            <a href="analytics.html" class="menu-item active">
+                📊 Analytics
+            </a>
+
+            
+
+            <a href="settings.html" class="menu-item">
+                ⚙️ Settings
+            </a>
+
+            <a href="index.html" class="menu-item logout">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- Topbar -->
+        <div class="topbar">
+
+            <div>
+                <h2>Analytics Dashboard</h2>
+                <p>Environmental complaint insights and statistics</p>
+            </div>
+
+            <div class="profile">
+                👤 Admin
+            </div>
+
+        </div>
+
+
+        <!-- Statistics -->
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-icon">📋</div>
+                <div>
+                    <h3>245</h3>
+                    <p>Total Complaints</p>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon">⏳</div>
+                <div>
+                    <h3>82</h3>
+                    <p>Pending</p>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon">🔄</div>
+                <div>
+                    <h3>41</h3>
+                    <p>In Progress</p>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div>
+                    <h3>122</h3>
+                    <p>Resolved</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- First Row Charts -->
+        <div class="chart-grid">
+
+            <!-- Category Chart -->
+            <div class="chart-card">
+
+                <h3>Complaints by Category</h3>
+
+                <canvas id="categoryChart"></canvas>
+
+            </div>
+
+
+            <!-- Status Chart -->
+            <div class="chart-card">
+
+                <h3>Complaint Status</h3>
+
+                <canvas id="statusChart"></canvas>
+
+            </div>
+
+        </div>
+
+
+        <!-- Second Row Charts -->
+        <div class="chart-grid">
+
+            <!-- Monthly Complaints -->
+            <div class="chart-card">
+
+                <h3>Monthly Complaints</h3>
+
+                <canvas id="monthlyChart"></canvas>
+
+            </div>
+
+
+            <!-- Location Chart -->
+            <div class="chart-card">
+
+                <h3>Complaints by Location</h3>
+
+                <canvas id="locationChart"></canvas>
+
+            </div>
+
+        </div>
+
+
+        <!-- Resolution Information -->
+        <div class="resolution-card">
+
+            <h3>📈 Resolution Performance</h3>
+
+            <div class="resolution-content">
+
+                <div class="progress-section">
+
+                    <div class="progress-label">
+                        <span>Complaints Resolved</span>
+                        <strong>50%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="performance-text">
+
+                    <h2>122 / 245</h2>
+
+                    <p>
+                        complaints have been successfully resolved.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/analytics.js"></script>
+
+</body>
+</html>

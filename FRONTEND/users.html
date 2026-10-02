@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Users - EcoServe</title>
+
+    <link rel="stylesheet" href="css/users.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <div class="brand">
+            🌱 EcoServe
+        </div>
+
+        <div class="menu">
+
+            <a href="dashboard.html" class="menu-item">
+                🏠 Dashboard
+            </a>
+
+            <a href="complaints.html" class="menu-item">
+                📋 Complaints
+            </a>
+
+            <a href="submit-complaint.html" class="menu-item">
+                ➕ Submit Complaint
+            </a>
+
+            <a href="analytics.html" class="menu-item">
+                📊 Analytics
+            </a>
+
+            <a href="users.html" class="menu-item active">
+                👥 Users
+            </a>
+
+            <a href="#" class="menu-item">
+                ⚙️ Settings
+            </a>
+
+            <a href="index.html" class="menu-item logout">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- Topbar -->
+        <div class="topbar">
+
+            <div>
+                <h2>User Management</h2>
+                <p>Manage citizens, staff and administrators</p>
+            </div>
+
+            <div class="profile">
+                👤 Admin
+            </div>
+
+        </div>
+
+
+        <!-- Statistics -->
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <div class="icon">👥</div>
+                <div>
+                    <h3>180</h3>
+                    <p>Total Users</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="icon">👤</div>
+                <div>
+                    <h3>150</h3>
+                    <p>Citizens</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="icon">🧑‍💼</div>
+                <div>
+                    <h3>25</h3>
+                    <p>Staff</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="icon">🔐</div>
+                <div>
+                    <h3>5</h3>
+                    <p>Admins</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- User Management Card -->
+        <div class="users-card">
+
+            <div class="card-header">
+
+                <h3>All Users</h3>
+
+                <button class="add-btn" onclick="addUser()">
+                    + Add User
+                </button>
+
+            </div>
+
+
+            <!-- Filters -->
+            <div class="filters">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="🔍 Search users..."
+                    onkeyup="filterUsers()"
+                >
+
+                <select id="roleFilter" onchange="filterUsers()">
+
+                    <option value="All">All Roles</option>
+                    <option value="Citizen">Citizen</option>
+                    <option value="Staff">Staff</option>
+                    <option value="Admin">Admin</option>
+
+                </select>
+
+                <select id="statusFilter" onchange="filterUsers()">
+
+                    <option value="All">All Status</option>
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Users Table -->
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Joined Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="userTable">
+
+                        <tr>
+                            <td>U001</td>
+                            <td>Ravi Kumar</td>
+                            <td>ravi@gmail.com</td>
+                            <td>
+                                <span class="role citizen">
+                                    Citizen
+                                </span>
+                            </td>
+                            <td>02 Sep 2026</td>
+                            <td>
+                                <span class="status active">
+                                    Active
+                                </span>
+                            </td>
+                            <td>
+                                <button
+                                    class="action-btn"
+                                    onclick="toggleUser(this)">
+                                    Deactivate
+                                </button>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>U002</td>
+                            <td>Priya Sharma</td>
+                            <td>priya@gmail.com</td>
+                            <td>
+                                <span class="role staff">
+                                    Staff
+                                </span>
+                            </td>
+                            <td>28 Aug 2026</td>
+                            <td>
+                                <span class="status active">
+                                    Active
+                                </span>
+                            </td>
+                            <td>
+                                <button
+                                    class="action-btn"
+                                    onclick="toggleUser(this)">
+                                    Deactivate
+                                </button>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>U003</td>
+                            <td>Arjun Reddy</td>
+                            <td>arjun@gmail.com</td>
+                            <td>
+                                <span class="role citizen">
+                                    Citizen
+                                </span>
+                            </td>
+                            <td>25 Aug 2026</td>
+                            <td>
+                                <span class="status inactive">
+                                    Inactive
+                                </span>
+                            </td>
+                            <td>
+                                <button
+                                    class="action-btn"
+                                    onclick="toggleUser(this)">
+                                    Activate
+                                </button>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>U004</td>
+                            <td>Sneha Rao</td>
+                            <td>sneha@gmail.com</td>
+                            <td>
+                                <span class="role admin">
+                                    Admin
+                                </span>
+                            </td>
+                            <td>20 Aug 2026</td>
+                            <td>
+                                <span class="status active">
+                                    Active
+                                </span>
+                            </td>
+                            <td>
+                                <button
+                                    class="action-btn"
+                                    onclick="toggleUser(this)">
+                                    Deactivate
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/users.js"></script>
+
+</body>
+</html>

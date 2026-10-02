@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings - EcoServe</title>
+
+    <link rel="stylesheet" href="css/settings.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <div class="brand">
+            🌱 EcoServe
+        </div>
+
+        <div class="menu">
+
+            <a href="dashboard.html" class="menu-item">
+                🏠 Dashboard
+            </a>
+
+            <a href="complaints.html" class="menu-item">
+                📋 Complaints
+            </a>
+
+            <a href="submit-complaint.html" class="menu-item">
+                ➕ Submit Complaint
+            </a>
+
+            <a href="analytics.html" class="menu-item">
+                📊 Analytics
+            </a>
+
+           
+
+            <a href="settings.html" class="menu-item active">
+                ⚙️ Settings
+            </a>
+
+            <a href="index.html" class="menu-item logout">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Main Content -->
+
+    <div class="main-content">
+
+        <!-- Header -->
+
+        <div class="topbar">
+
+            <div>
+                <h2>Settings</h2>
+                <p>Manage your EcoServe account settings</p>
+            </div>
+
+            <div class="profile">
+                👤 Admin
+            </div>
+
+        </div>
+
+
+        <!-- Profile Settings -->
+
+        <div class="settings-card">
+
+            <h3>👤 Profile Settings</h3>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>Full Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        value="Admin User"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        value="admin@ecoserve.com"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Phone Number</label>
+
+                    <input
+                        type="text"
+                        id="phone"
+                        value="9876543210"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Role</label>
+
+                    <input
+                        type="text"
+                        value="Administrator"
+                        disabled
+                    >
+
+                </div>
+
+            </div>
+
+            <button class="save-btn" onclick="saveProfile()">
+                Save Profile
+            </button>
+
+            <p id="profileMessage"></p>
+
+        </div>
+
+
+        <!-- Change Password -->
+
+        <div class="settings-card">
+
+            <h3>🔐 Change Password</h3>
+
+            <div class="password-section">
+
+                <div class="form-group">
+
+                    <label>Current Password</label>
+
+                    <input
+                        type="password"
+                        id="currentPassword"
+                        placeholder="Enter current password"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>New Password</label>
+
+                    <input
+                        type="password"
+                        id="newPassword"
+                        placeholder="Enter new password"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Confirm New Password</label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm new password"
+                    >
+
+                </div>
+
+            </div>
+
+            <button class="save-btn" onclick="changePassword()">
+                Change Password
+            </button>
+
+            <p id="passwordMessage"></p>
+
+        </div>
+
+
+        <!-- Notification Settings -->
+
+        <div class="settings-card">
+
+            <h3>🔔 Notification Settings</h3>
+
+            <div class="setting-row">
+
+                <div>
+                    <strong>Email Notifications</strong>
+                    <p>Receive updates about complaints through email.</p>
+                </div>
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        id="emailNotification"
+                        checked
+                    >
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="setting-row">
+
+                <div>
+                    <strong>Complaint Updates</strong>
+                    <p>Receive notifications when complaint status changes.</p>
+                </div>
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        id="complaintNotification"
+                        checked
+                    >
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="setting-row">
+
+                <div>
+                    <strong>New Complaint Alerts</strong>
+                    <p>Receive alerts when a new complaint is submitted.</p>
+                </div>
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        id="newComplaintNotification"
+                        checked
+                    >
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <button class="save-btn" onclick="saveNotifications()">
+                Save Notification Settings
+            </button>
+
+            <p id="notificationMessage"></p>
+
+        </div>
+
+
+        <!-- System Information -->
+
+        <div class="settings-card">
+
+            <h3>ℹ️ System Information</h3>
+
+            <div class="system-info">
+
+                <div>
+                    <span>Application</span>
+                    <strong>EcoServe</strong>
+                </div>
+
+                <div>
+                    <span>Version</span>
+                    <strong>1.0.0</strong>
+                </div>
+
+                <div>
+                    <span>Platform</span>
+                    <strong>Web Application</strong>
+                </div>
+
+                <div>
+                    <span>Environment</span>
+                    <strong>Development</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/settings.js"></script>
+
+</body>
+
+</html>

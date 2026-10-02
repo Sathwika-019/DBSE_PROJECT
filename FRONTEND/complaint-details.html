@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Complaint Details - EcoServe</title>
+
+    <link rel="stylesheet" href="css/complaint-details.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <div class="brand">
+            🌱 EcoServe
+        </div>
+
+        <div class="menu">
+
+            <a href="dashboard.html" class="menu-item">
+                🏠 Dashboard
+            </a>
+
+            <a href="complaints.html" class="menu-item active">
+                📋 Complaints
+            </a>
+
+            <a href="submit-complaint.html" class="menu-item">
+                ➕ Submit Complaint
+            </a>
+
+            <a href="analytics.html" class="menu-item">
+                📊 Analytics
+            </a>
+
+           
+
+            <a href="settings.html" class="menu-item">
+                ⚙️ Settings
+            </a>
+
+            <a href="index.html" class="menu-item logout">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+        <!-- TOP BAR -->
+        <div class="topbar">
+
+            <div>
+                <h2>Complaint Details</h2>
+
+                <p>
+                    View and manage complaint information
+                </p>
+            </div>
+
+            <div class="profile">
+                👤 Admin
+            </div>
+
+        </div>
+
+
+        <!-- BACK BUTTON -->
+        <button
+            class="back-btn"
+            onclick="window.location.href='complaints.html'">
+
+            ← Back to Complaints
+
+        </button>
+
+
+        <!-- COMPLAINT HEADER -->
+        <div class="complaint-header">
+
+            <div>
+
+                <h1 id="complaintTitle">
+                    Loading...
+                </h1>
+
+                <p class="complaint-id">
+                    Complaint ID:
+                    <span id="complaintId">
+                        Loading...
+                    </span>
+                </p>
+
+            </div>
+
+            <span
+                id="complaintStatus"
+                class="status pending">
+
+                Loading...
+
+            </span>
+
+        </div>
+
+
+        <!-- DETAILS GRID -->
+        <div class="details-grid">
+
+
+            <!-- COMPLAINT INFORMATION -->
+            <div class="card">
+
+                <h3>
+                    📋 Complaint Information
+                </h3>
+
+
+                <div class="info-row">
+
+                    <span>
+                        Complaint ID
+                    </span>
+
+                    <strong id="complaintIdInfo">
+                        Loading...
+                    </strong>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span>
+                        Category
+                    </span>
+
+                    <strong id="complaintCategory">
+                        Loading...
+                    </strong>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span>
+                        Location
+                    </span>
+
+                    <strong id="complaintLocation">
+                        Loading...
+                    </strong>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span>
+                        Date Submitted
+                    </span>
+
+                    <strong id="complaintDate">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span>
+                        Priority
+                    </span>
+
+                    <strong
+                        id="complaintPriority"
+                        class="high">
+
+                        -
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- DESCRIPTION -->
+            <div class="card">
+
+                <h3>
+                    📝 Description
+                </h3>
+
+                <p
+                    id="complaintDescription"
+                    class="description">
+
+                    Loading...
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- IMAGE + LOCATION -->
+        <div class="details-grid">
+
+
+            <!-- IMAGE -->
+            <div class="card">
+
+                <h3>
+                    📷 Complaint Image
+                </h3>
+
+                <div class="image-placeholder">
+
+                    <span>
+                        🗑️
+                    </span>
+
+                    <p>
+                        Complaint image
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOCATION -->
+            <div class="card">
+
+                <h3>
+                    📍 Location
+                </h3>
+
+
+                <div class="location-box">
+
+                    <span>
+                        📍
+                    </span>
+
+                    <div>
+
+                        <strong id="locationName">
+                            Loading...
+                        </strong>
+
+                        <p>
+                            Hyderabad, Telangana
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button class="map-btn">
+
+                    🗺️ View on Map
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- UPDATE COMPLAINT -->
+        <div class="card update-card">
+
+            <h3>
+                🔄 Update Complaint
+            </h3>
+
+
+            <div class="update-grid">
+
+
+                <div>
+
+                    <label>
+                        Assign Staff
+                    </label>
+
+                    <select id="staff">
+
+                        <option value="">
+                            Select Staff
+                        </option>
+
+                        <option>
+                            Rahul Kumar
+                        </option>
+
+                        <option>
+                            Priya Sharma
+                        </option>
+
+                        <option>
+                            Arjun Reddy
+                        </option>
+
+                        <option>
+                            Sneha Rao
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div>
+
+                    <label>
+                        Update Status
+                    </label>
+
+                    <select id="status">
+
+                        <option value="Pending">
+                            Pending
+                        </option>
+
+                        <option value="In Progress">
+                            In Progress
+                        </option>
+
+                        <option value="Resolved">
+                            Resolved
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="update-btn"
+                onclick="updateComplaint()">
+
+                Update Complaint
+
+            </button>
+
+
+            <p
+                id="successMessage"
+                class="success-message">
+
+            </p>
+
+        </div>
+
+
+        <!-- TIMELINE -->
+        <div class="card">
+
+            <h3>
+                🕒 Complaint Timeline
+            </h3>
+
+
+            <div class="timeline">
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div>
+
+                        <strong>
+                            Complaint Submitted
+                        </strong>
+
+                        <p>
+                            Complaint submitted by user
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div>
+
+                        <strong>
+                            Complaint Received
+                        </strong>
+
+                        <p>
+                            Complaint received by EcoServe
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div>
+
+                        <strong id="timelineStatus">
+                            Current Status: Loading...
+                        </strong>
+
+                        <p>
+                            Current complaint status
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="js/complaint-details.js"></script>
+
+</body>
+
+</html>
